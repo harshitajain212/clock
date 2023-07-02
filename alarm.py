@@ -7,5 +7,6 @@ window.title(" ")
 window.geometry("350x150")
 window.configure(bg=bgcolor)
 
-
+frame_lines= Frame(window, width=400,height=5)
+frame_line.grid(row=0,column=0)
 window.mainloop()
