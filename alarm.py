@@ -1,13 +1,12 @@
-from tkinter.ttk import *
-from tkinter import *
-
-bg_color="#ffffff"
-col="#566FCC6"
-window =Tk()
-window.title(" ")
-window.geometry("350x150")
-window.configure(bg=bgcolor)
-
-frame_lines= Frame(window, width=400,height=5 bg=col)
-frame_line.grid(row=0,column=0)
-window.mainloop()
+import datetime
+from playsound import playsound
+alarmHour = int(input("Enter Hour:"))
+alarmMin = int(input("Enter Min:" ))
+amPm = str(input("am/pm:"))
+if amPm =="pm":
+    alarmHour = alarmHour + 12
+while True:
+    if alarmHour == datetime.datetime.now().hour and alarmMin ==datetime.datetime.now().minute:
+        print("Wake Up")
+        playsound("alarm.mp3")
+        break
